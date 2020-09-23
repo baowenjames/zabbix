@@ -5,7 +5,7 @@ yum install epel-release
 
 安装常用的开发组件
 yum  groups install "Development Tools"
-yum groups info  "Development Tools"
+yum groups info "Development Tools"
 
 
 增加Zabbix镜像源
@@ -14,7 +14,7 @@ rpm -ivh https://repo.zabbix.com/zabbix/4.0/rhel/7/x86_64/zabbix-release-4.0-1.e
 
 关闭SElinux
 systemctl stop firewalld.service
-systemctl disable  firewalld.service
+systemctl disable firewalld.service
 
 vim /etc/selinux/config
 
@@ -28,8 +28,8 @@ yum install zabbix-web-mysql
 
 安装MySQL
 yum install mariadb-server
-systemctl  start mariadb.service
-systemctl  status mariadb.service
+systemctl start mariadb.service
+systemctl status mariadb.service
 mysql_secure_installation
 
 
