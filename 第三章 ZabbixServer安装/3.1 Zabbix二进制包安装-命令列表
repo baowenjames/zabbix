@@ -79,6 +79,7 @@ zabbix
 安装Zabbix Agent
 yum install zabbix-agent
 
+vim /etc/zabbix/zabbix_agentd.conf
 systemctl start zabbix-agent.service
 
 
