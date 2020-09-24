@@ -21,6 +21,7 @@ ELINUX=disabled
 
 yum install iptables-services
 
+yum install bash-completion-extras
 
 安装Zabbix Server和Frontend
 yum install zabbix-server-mysql
