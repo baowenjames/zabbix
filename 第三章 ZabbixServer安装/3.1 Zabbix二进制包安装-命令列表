@@ -17,6 +17,7 @@ systemctl stop firewalld.service
 systemctl disable firewalld.service
 
 vim /etc/selinux/config
+ELINUX=disabled
 
 yum install iptables-services
 
