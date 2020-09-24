@@ -32,6 +32,7 @@ yum install zabbix-web-mysql
 yum install mariadb-server
 systemctl start mariadb.service
 systemctl status mariadb.service
+systemctl enable mariadb.service
 mysql_secure_installation
 
 
@@ -51,6 +52,7 @@ vim /etc/zabbix/zabbix_server.conf
 启动Zabbix Server
 systemctl start zabbix-server.service
 systemctl status zabbix-server.service
+systemctl enable zabbix-server.service
 
 more /var/log/zabbix/zabbix_server.log
 
@@ -71,6 +73,7 @@ date.timezone = Asia/Shanghai
 启动httpd
 systemctl start httpd.service
 systemctl status httpd.service
+systemctl enable zabbix-server.service
 
 http://10.211.55.7/zabbix/setup.php
 
