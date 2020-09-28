@@ -76,7 +76,7 @@ date.timezone = Asia/Shanghai
 启动httpd
 systemctl start httpd.service
 systemctl status httpd.service
-systemctl enable zabbix-server.service
+systemctl enable httpd.service
 
 http://10.211.55.7/zabbix/setup.php
 
