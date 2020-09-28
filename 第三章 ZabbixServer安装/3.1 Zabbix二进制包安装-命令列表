@@ -27,7 +27,6 @@ yum install bash-completion-extras
 yum install zabbix-server-mysql
 yum install zabbix-web-mysql
 
-
 安装MySQL
 yum install mariadb-server
 systemctl start mariadb.service
@@ -37,13 +36,17 @@ mysql_secure_installation
 
 
 创建数据库
-mysql -uroot -p
+mysql -uroot -pzabbix@findsec123
 create database zabbix character set utf8 collate utf8_bin;
 grant all privileges on zabbix.* to zabbix@localhost identified by 'zabbix@findsec123';
 
 导入数据结构
 zcat /usr/share/doc/zabbix-server-mysql*/create.sql.gz | mysql -uzabbix -pzabbix@findsec123  zabbix
 
+查看表是否创建成功144张
+mysql -uroot -pzabbix@findsec123
+user zabbix
+show tables
 
 配置Zabbix Serve
 vim /etc/zabbix/zabbix_server.conf
